@@ -1,0 +1,16 @@
+.Header{
+    display: flex;
+    gap: 0px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.Header .select{
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px 10px;
+    outline: none;
+    font-size: 25px;
+ }
