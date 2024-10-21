@@ -1,13 +1,11 @@
-.noterap{
-    padding: 10px;
-    border-bottom:1px solid gainsboro;
-    display: flex;
-    justify-content: space-between;
-    
+.noterap {
+  padding: 10px;
+  border-bottom: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
 }
 
-
-.date{
-    font-size: 10px;
-    color: gainsboro
+.date {
+  font-size: 10px;
+  color: gainsboro;
 }

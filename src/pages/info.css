@@ -1,51 +1,51 @@
 .info {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
 .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-    padding: 10px;
-    background-color: #f0f0f0;  
-    border-bottom: 2px solid #ddd;  
-    text-align: center;
-    border-radius: 5px 5px 0 0; 
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ddd;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
 }
 
 .cont {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    white-space: pre-wrap;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 0 0 5px 5px; /* 하단에만 둥근 모서리 */
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* 내용 부분에 그림자 추가 */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  white-space: pre-wrap;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px; /* 하단에만 둥근 모서리 */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* 내용 부분에 그림자 추가 */
 }
 
 button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 10px;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
 }
 
-.delB{
-    width: 100%;
+.delB {
+  width: 100%;
 }
 
-.prev{
-    font-size: 20px;
-    color: black;
-    background-color: white;
+.prev {
+  font-size: 20px;
+  color: black;
+  background-color: white;
 }
