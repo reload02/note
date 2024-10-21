@@ -9,21 +9,21 @@ import { useRef, useState, createContext, useEffect } from "react";
 let items = [
   {
     id: 1,
-    title: "1번메모",
+    title: "1번메모장",
     content: "1번입니다",
     Newdate: new Date(2024, 5, 20, 10, 30, 0),
     Editdate: null,
   },
   {
     id: 2,
-    title: "2번메모입니다",
+    title: "2번메모장",
     content: "2번입니다",
     Newdate: new Date(2024, 8, 20, 10, 30, 0),
     Editdate: null,
   },
   {
     id: 3,
-    title: "3번메모입니다",
+    title: "3번메모장",
     content: "3번입니다",
     Newdate: new Date(2024, 7, 10, 10, 30, 0),
     Editdate: null,
@@ -57,8 +57,10 @@ const EditNote = (noteId, noteT, noteC, notes, setNotes) => {
   );
 };
 
-const maxid = (notes) => {
+const maxId = (notes) => {
+  if(!notes)return 4;
   let mi = 0;
+  
   notes.map((note) => {
     if (note.id > mi) mi = note.id;
   });
@@ -69,13 +71,17 @@ function App() {
   const [notes, setNotes] = useState(
     JSON.parse(localStorage.getItem("noteData")),
   );
+
+  
+
   //const [notes,setNotes] = useState(items);
 
-  const noteId = useRef(maxid(notes));
+  const noteId = useRef(maxId(notes));
 
-  useEffect(() => {
+   useEffect(() => { 
+     if (!notes) {setNotes(items);}
     localStorage.setItem("noteData", JSON.stringify(notes));
-  }, [notes]);
+   }, [notes]);
 
   return (
     <>
