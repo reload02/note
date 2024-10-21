@@ -11,21 +11,21 @@ let items = [
     id: 1,
     title: "1번메모장",
     content: "1번입니다",
-    Newdate: new Date(2024, 5, 20, 10, 30, 0),
+    Newdate: new Date(2024, 5, 20, 10, 30, 0).toLocaleDateString(),
     Editdate: null,
   },
   {
     id: 2,
     title: "2번메모장",
     content: "2번입니다",
-    Newdate: new Date(2024, 8, 20, 10, 30, 0),
+    Newdate: new Date(2024, 8, 20, 10, 30, 0).toLocaleDateString(),
     Editdate: null,
   },
   {
     id: 3,
     title: "3번메모장",
     content: "3번입니다",
-    Newdate: new Date(2024, 7, 10, 10, 30, 0),
+    Newdate: new Date(2024, 7, 10, 10, 30, 0).toLocaleDateString(),
     Editdate: null,
   },
 ];
@@ -37,9 +37,10 @@ const NewNote = (noteId, noteT, noteC, notes, setNotes) => {
     id: noteId++,
     title: noteT,
     content: noteC,
-    Newdate: String(new Date()),
+    Newdate: new Date().toLocaleDateString(),
     Editdate: null,
   };
+  console.log(note.Newdate);
   setNotes([...notes, note]);
 };
 
@@ -51,16 +52,21 @@ const EditNote = (noteId, noteT, noteC, notes, setNotes) => {
   setNotes(
     notes.map((note) =>
       Number(note.id) === Number(noteId)
-        ? { ...note, title: noteT, content: noteC, Editdate: new Date() }
+        ? {
+            ...note,
+            title: noteT,
+            content: noteC,
+            Editdate: new Date().toLocaleDateString(),
+          }
         : note,
     ),
   );
 };
 
 const maxId = (notes) => {
-  if(!notes)return 4;
+  if (!notes) return 4;
   let mi = 0;
-  
+
   notes.map((note) => {
     if (note.id > mi) mi = note.id;
   });
@@ -72,16 +78,16 @@ function App() {
     JSON.parse(localStorage.getItem("noteData")),
   );
 
-  
-
   //const [notes,setNotes] = useState(items);
 
   const noteId = useRef(maxId(notes));
 
-   useEffect(() => { 
-     if (!notes) {setNotes(items);}
+  useEffect(() => {
+    if (!notes) {
+      setNotes(items);
+    }
     localStorage.setItem("noteData", JSON.stringify(notes));
-   }, [notes]);
+  }, [notes]);
 
   return (
     <>

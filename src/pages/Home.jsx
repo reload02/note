@@ -13,9 +13,13 @@ const Home = () => {
     <div className="Home">
       <Header leftChild={"👍"} middleChild={"메모장"} rightChild={"❤️"} />
       <div className="notewrap">
-        {!notes ? <button/> : notes.map((note) => {
-          return <Note key={note.id} note={note} />;
-        })}
+        {!notes ? (
+          <button />
+        ) : (
+          notes.map((note) => {
+            return <Note key={note.id} note={note} />;
+          })
+        )}
       </div>
       <button
         className="newB"
